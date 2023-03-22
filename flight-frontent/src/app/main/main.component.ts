@@ -8,22 +8,23 @@ import { OnInit, Injectable } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent{
-  public booking: Booking[];
+  // public booking: Booking[];
 
-  constructor(private http: HttpClient) {
-    this.booking = [];
-  }
+  // constructor(private http: HttpClient) {
+  //   this.booking = [];
+  // }
 
-  public getBookingData(customerId : number, referenceNumber : number) {
-    const body = {"customerId": customerId, "flightId": referenceNumber};
-    return this.http.post<any>('http://localhost:8080/bookings', body);
-  }
+  // public getBookingData(customerId : number, referenceNumber : number) {
+  //   const body = {"customerId": customerId, "flightId": referenceNumber};
+  //   return this.http.post<any>('http://localhost:8080/bookings', body);
+  // }
+
 }
 
-export class Booking {
-  constructor(
-    @Inject('customerId') public customerId: number,
-      public flightId: number,
-      public referenceNumber: string
-  ) {}
-}
+// export class Booking {
+//   constructor(
+//     @Inject('customerId') public customerId: number,
+//       public flightId: number,
+//       public referenceNumber: string
+//   ) {}
+// }
